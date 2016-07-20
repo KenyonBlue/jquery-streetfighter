@@ -27,6 +27,7 @@ $(document).ready(function () {
     });
     $(document).keydown(function (e) {
         if (e.keyCode == 88) {
+            playCool();
             $('.ryu-still').hide();
             $('.ryu-ready').hide();
             $('.ryu-cool').show();
@@ -49,9 +50,26 @@ $(document).ready(function () {
     });
 
 });
+var hadoukenSound = false;
 
 function playHadouken() {
-    $('#hadouken-sound')[0].volume = 0.5;
-    $('#hadouken-sound')[0].load();
-    $('#hadouken-sound')[0].play();
+    hadoukenSound = !hadoukenSound;
+
+
+    if (hadoukenSound) {
+        $('#hadouken-sound')[0].volume = 0.5;
+        $('#hadouken-sound')[0].load();
+        $('#hadouken-sound')[0].play();
+
+    }
+}
+var coolSound = false;
+
+function playCool() {
+    //if the sounds was playing before make sure it is stopped before starting a new one
+    coolSound = !coolSound;
+    if (coolSound) {
+        $('#cool')[0].play();
+        $('#cool')[0].volume = 0.5;
+    }
 }
