@@ -41,12 +41,6 @@ $(document).ready(function () {
         }
 
 
-        /*
-            $('ryu').keydown(function (x) {
-                if (x.which == 88)
-                    console.log('keydown')
-
-            });*/
     });
 
 });
