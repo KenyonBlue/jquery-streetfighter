@@ -48,8 +48,6 @@ var hadoukenSound = false;
 
 function playHadouken() {
     hadoukenSound = !hadoukenSound;
-
-
     if (hadoukenSound) {
         $('#hadouken-sound')[0].volume = 0.5;
         $('#hadouken-sound')[0].load();
